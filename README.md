@@ -60,7 +60,7 @@ Blocks have a fixed price which is determine by the shape. We have the following
 - Triangle blocks cost $2 
 - Circle blocks cost $3
 
-There is no additional charge for the colour unless the shape is in red, in which case we charge an additional $1 per shape surcharge is applied.
+Red colour blocks are charged an additional $1 per shape surcharge, other colours have no surcharges applied.
 
 ## Order details
 
