@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using ToyBlockFactoryKata.Reports;
+using static System.String;
 
 namespace ToyBlockFactoryConsole
 {
@@ -9,59 +10,24 @@ namespace ToyBlockFactoryConsole
         public static void PrintReport(IReport report)
         {
             Console.WriteLine();
+            Console.WriteLine($"Your {report.ReportType.ToString().ToLower()} report has been generated:");
+            Console.WriteLine();
             Console.WriteLine(
-                "Your " + report.ReportType.ToString().ToLower() + " report has been generated:" +
-                "\n\n" +
-                "Name: " + report.Name + "  Address: " + report.Address + "  Due Date: " +
-                report.DueDate.ToString("dd/MM/yyyy") + "  Order #: " + report.OrderId);
-            
+                $"Name: {report.Name}  Address: {report.Address}  Due Date: {report.DueDate:dd/MM/yyyy}  Order #: {report.OrderId}");
             Console.WriteLine();
 
-            var topRowLabels = report.OrderTable.SelectMany(l => l.TableColumn).Select(l => l.MeasuredItem).Distinct();
-            String s = "|          ";
-            foreach (var label in topRowLabels)
-                s += $"| {label,8} ";
-            
-            s += "|\n";
-            for (var i =0; i <= topRowLabels.Count(); i++)
-            {
-                s += "|----------";
-            }
-            s += "|\n";
-            
-            foreach (var row in report.OrderTable)
-            {
-                s += $"| {row.Shape.ToString(),-8} |";
-                foreach (var column in row.TableColumn)
-                {
-                    if (column.Quantity > 0)
-                        s += $" {column.Quantity.ToString(),8} |";
-                    else
-                        s += $" {"-",8} |";
-                }
-                s += "\n";
-            }
-            Console.WriteLine($"{s}");
+            var topRowLabels =
+                report.OrderTable
+                    .SelectMany(l => l.TableColumn)
+                    .Select(l => l.MeasuredItem)
+                    .Distinct().ToList();
 
-            
-            if (report.ReportType == ReportType.Invoice)
-                PrintLineItems(report);
-            
-        }
-        
-        private static void PrintLineItems(IReport report)
-        {
-            String l = "";
-            var lineItems = ((InvoiceReport) report).LineItems.Select(l => l);
-            foreach (var line in lineItems)
-            {
-                l += $"{line.Description,-25} ";
-                l += line.Quantity + " @ $" + line.Price + " ppi = $" + line.Total + "\n";
-            }
+            Console.WriteLine(Join("|", topRowLabels.Select(l => $"{l,8}")));
+            Console.WriteLine(Join("|", topRowLabels.Select(_ => "----------")));
+            Console.WriteLine(Join("\n", report.OrderTable));
 
-            l += "\nTotal : $" + ((InvoiceReport) report).Total;
-            Console.WriteLine($"{l}");
+            if (report is InvoiceReport invoice)
+                Console.WriteLine(Join("\n", invoice.LineItems) + $"\nTotal : ${invoice.Total}");
         }
-        
     }
 }
