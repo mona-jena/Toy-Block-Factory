@@ -81,10 +81,10 @@ You have a single painting department that paints all shapes but wants to have s
 
 # Invoice Report
 
-Name: Mark Pearl
-Address: 1 Bob Avenue, Auckland
-Due Date: 11 Feb 2021
-Order #: 0001
+Name: Mark Pearl 
+Address: 1 Bob Avenue, Auckland 
+Due Date: 11 Feb 2021 
+Order #: 0001 
 
 |          | Red | Blue | Yellow |
 |----------|-----|------|--------|
@@ -122,9 +122,9 @@ Total : $16
 
 # Cutting List Report
 
-Name: Mark Pearl
-Address: 1 Bob Avenue, Auckland
-Due Date: 11 Feb 2021
+Name: Mark Pearl 
+Address: 1 Bob Avenue, Auckland 
+Due Date: 11 Feb 2021 
 Order #: 0001
 
 |          | Qty |
@@ -150,9 +150,9 @@ Name: Mark Pearl Address: 1 Bob Avenue, Auckland Due Date: 11/02/2021 Order #: 0
 
 # Painting Report
 
-Name: Mark Pearl
-Address: 1 Bob Avenue, Auckland
-Due Date: 11 Feb 2021
+Name: Mark Pearl 
+Address: 1 Bob Avenue, Auckland 
+Due Date: 11 Feb 2021 
 Order #: 0001
 
 |          | Red | Blue | Yellow |
