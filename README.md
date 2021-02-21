@@ -103,20 +103,21 @@ Total : $16
 ~~~
 Your invoice report has been generated:
 
-Name: Mark Pearl Address: 1 Bob Avenue, Auckland Due Date: 19 Jan 2021 Order #: 0001
+Name: Mark Pearl  Address: 1 Bob Avenue, Auckland  Due Date: 28/02/2021  Order #: 0001
 
-|          | Red | Blue | Yellow |
-|----------|-----|------|--------|
-| Square   | 1   | -    | 1      |
-| Triangle | -   | 2    | -      |
-| Circle   | -   | 1    | 2      |
+|          |      Red |   Yellow |     Blue |
+|----------|----------|----------|----------|
+| Square   |        1 |        1 |        0 |
+| Triangle |        0 |        0 |        2 |
+| Circle   |        0 |        2 |        1 |
 
-Squares 		2 @ $1 ppi = $2  
-Triangles		2 @ $2 ppi = $4  
-Circles			3 @ $3 ppi = $9  
-Red color surcharge	1 @ $1 ppi = $1 
+Square                    2 @ $1 ppi = $2
+Triangle                  2 @ $2 ppi = $4
+Circle                    3 @ $3 ppi = $9
+Red colour surcharge      1 @ $1 ppi = $1
 
 Total : $16
+
 ~~~
 
 # Cutting List Report
@@ -137,13 +138,13 @@ Order #: 0001
 ~~~
 Your cutting list has been generated:
 
-Name: Mark Pearl Address: 1 Bob Avenue, Auckland Due Date: 19 Jan 2021 Order #: 0001
+Name: Mark Pearl Address: 1 Bob Avenue, Auckland Due Date: 28/02/2021 Order #: 0001
 
-|          | Qty |
-|----------|-----|
-| Square   | 2   |
-| Triangle | 2   |
-| Circle   | 3   |
+|          |      Qty |
+|----------|----------|
+| Square   |        2 |
+| Triangle |        2 |
+| Circle   |        3 |
 
 
 ~~~
@@ -165,13 +166,14 @@ Order #: 0001
 ~~~
 Your painting report has been generated:
 
-Name: Mark Pearl Address: 1 Bob Avenue, Auckland Due Date: 19 Jan 2021 Order #: 0001
+Name: Mark Pearl Address: 1 Bob Avenue, Auckland Due Date: 28/02/2021 Order #: 0001
 
-|          | Red | Blue | Yellow |
-|----------|-----|------|--------|
-| Square   | 1   | -    | 1      |
-| Triangle | -   | 2    | -      |
-| Circle   | -   | 1    | 2      |
+|          |      Red |   Yellow |     Blue |
+|----------|----------|----------|----------|
+| Square   |        1 |        1 |        0 |
+| Triangle |        0 |        0 |        2 |
+| Circle   |        0 |        2 |        1 |
+
 ~~~
 
 ------------------------------------------------------------------------------------------------------------
