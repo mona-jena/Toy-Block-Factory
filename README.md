@@ -146,7 +146,6 @@ Name: Mark Pearl Address: 1 Bob Avenue, Auckland Due Date: 28/02/2021 Order #: 0
 | Triangle |        2 |
 | Circle   |        3 |
 
-
 ~~~
 
 # Painting Report
